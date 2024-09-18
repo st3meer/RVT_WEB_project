@@ -1,0 +1,27 @@
+aside {
+    width: 10%;
+    float: right;
+    background-color: rgb(190, 225, 255);
+    padding: 1em;
+}
+
+body {
+    background-color: azure;
+    font-family: Arial;  
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+A {
+    color: #dec1ff;
+    font-weight: bold;
+}
+
+main {
+    height: 100%;
+}
