@@ -1,15 +1,19 @@
 .flexbox {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    max-width: 1000px;
 }
 
 .flexbox > div {
+    display: grid;
+    grid-template-rows: auto 2fr auto;
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid rgb(149, 131, 255);
     background-color:rgb(193, 182, 255);
     border-radius:5%;
-    width:fit-content;
+    width: 100%;
+    transition: 0.5s;
 }
 
 .flexbox > div > h2 {
@@ -18,18 +22,32 @@
     color: black;
 }
 
+.flexbox > div > p {
+    font-size: 1.3em;
+    color: black;
+    margin-bottom: flex;
+}
+
 .flexbox > div > button {
     background-color: lightblue;
-    border: 1px solid black;
+    border: 1px solid rgb(102, 195, 226);
     border-radius: 7%;
     width: 100%;
-    font-size: 1.2em;
-    padding: 8%;
-    margin-top: flex;
+    font-size: x-large;
+    padding: 8%;  
+    transition: 0.5s;    
 }
 
 .flexbox > div > button:hover {
     background-color: lightcoral;
+    transition: 0.5s;
+}
+
+.flexbox > div:hover {
+    background-color: rgb(220, 182, 255);
+    transition: all 0.3s ease-in-out;
+    width: 150%;
+    height: 100%;
 }
 
 .flexbox > div > button:active {
@@ -38,8 +56,9 @@
 
 .flexbox > div > img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 5%;
-
 }
 
 body {
