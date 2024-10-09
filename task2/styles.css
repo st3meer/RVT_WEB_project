@@ -7,11 +7,15 @@
     }
 }
 
-@media(max-width: 900px) {
-    .flexbox {
-        flex-direction: column;
-    }    
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
+
 
 header {
     display: flex;
@@ -20,28 +24,32 @@ header {
     margin: 0;
 }
 
+
 header > h1 {
     font-size: 2.5vmax;
     color: rgb(255, 255, 255);
     margin: 10px;
 }
 
-header > a{
+header > a, .abut{
     padding: 1%;
     font-size: 1.5vmax;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.048);
+    border-width: 0px;
 }
 
-header > a:hover{
+header > a:hover, .abut:hover {
     color: lightcoral;
     background-color: rgba(0, 0, 0, 0.349);
     transition: 0.3s;
 }
 
 .spacer {
-    flex-grow: 1;
+    flex-grow: 0.9;
 }
+
+
 
 .dropdown {
     position: relative;
@@ -67,8 +75,9 @@ header > a:hover{
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.5);
     padding: 4%;
-    text-decoration: none;
     display: block;
+    padding-right: 10%;
+    padding-top: 10%;
 }
 
 .dropdown-content > a:hover {
@@ -78,8 +87,6 @@ header > a:hover{
 }
 
 .dropdown:hover {
-    background-color: rgba(0, 0, 0, 0.349);
-    transition: 0.3s;
     span {
         color: lightcoral;
     }
@@ -89,6 +96,7 @@ header > a:hover{
     display: block;
     background-color: rgba(0, 0, 0, 0.349);
     transition: 0.3s;
+
 }
 
 
@@ -99,13 +107,7 @@ header > a:hover{
     flex-direction: row;
 }
 
-@media screen and (max-width: 900px) {
-    .flexbox {
-        flex-direction: column;
-    }
-    
-}
-    
+
 .flexbox > div {
     display: grid;
     grid-template-rows: auto 2fr auto;
@@ -116,8 +118,6 @@ header > a:hover{
     border-radius:5%;
     width: 100%;
     transition: 0.5s;
-    animation-name: slideout;
-    animation-duration: 4s;
 }
 
 .flexbox > div > h2 {
@@ -173,3 +173,66 @@ body {
     margin: 0px;
 }
 
+
+.darkmode {
+    background-color: black;
+    color: white;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+@media screen and (max-width: 600px) {
+    .flexbox {
+        flex-direction: column;
+        max-width: 85%;
+    }
+
+    .flexbox > div{
+        height: 40%;
+    }
+
+    .flexbox > div:hover{
+        width: 100%;
+        background-color: rgb(220, 182, 255);
+        transition: all 0.3s ease-in-out;
+    }
+    
+}
+    
