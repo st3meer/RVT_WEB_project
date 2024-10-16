@@ -4,22 +4,35 @@
         <title>Home</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
     </head>
     <body>
         <header>
-            <h1>Mobile OS</h1>             
-            <a href="home">Home</a>
-            <a href="about">About</a>
-            <a href="contact">Contact</a>
-            <button type="button" class="abut" onclick="drkmode()">dark mode</button>
-            <b class="spacer"></b>
-            <div class="dropdown">
-                <span>More</span>
-                <div class="dropdown-content">
-                    <a href="">IOS aplikaciju izstrade</a>
-                    <a href="">Adroid izstrade </a>
-                    <a href="">Web lapu izstrade</a>
-            </div>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <h1>Mobile OS</h1> 
+          <div class="topnav" id="myTopnav">  
+              <a href="home">Home</a>
+              <a href="about">About</a>
+              <a href="contact">Contact</a>
+              <div class="nodd"> 
+              <a href="">IOS aplikaciju izstrade</a>
+              <a href="">Adroid izstrade </a>
+              <a href="">Web lapu izstrade</a>
+              </div>
+              <button type="button" class="abut" onclick="drkmode()">dark mode</button>
+              <b class="spacer"></b>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+          </div>
+          <div class="dropdown">
+            <span>More</span>
+            <div class="dropdown-content">
+                <a href="">IOS aplikaciju izstrade</a>
+                <a href="">Adroid izstrade </a>
+                <a href="">Web lapu izstrade</a>
+        </div>
+        </div>
         </header>
 
         <div class="flexbox">
@@ -62,62 +75,6 @@
                 <p>Some text in the Modal..windows</p>
             </div>
         </div>
-
-        <script>
-            function drkmode() {
-               var element = document.body;
-               element.classList.toggle("darkmode");
-            }
-
-            // Get the modal
-            var modal_adr = document.getElementById("modal-adr");
-            var modal_ios = document.getElementById("modal-ios");
-            var modal_win = document.getElementById("modal-win");
-            
-            // Get the button that opens the modal
-            var btn_adr = document.getElementById("adr");
-            var btn_ios = document.getElementById("ios");
-            var btn_win = document.getElementById("win");
-            
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-            
-            // When the user clicks the button, open the modal 
-            btn_adr.onclick = function() {
-              modal_adr.style.display = "block";
-            }
-            // When the user clicks the button, open the modal 
-            btn_ios.onclick = function() {
-              modal_ios.style.display = "block";
-            }
-            // When the user clicks the button, open the modal 
-            btn_win.onclick = function() {
-              modal_win.style.display = "block";
-            }
-            
-            //android
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-              modal_adr.style.display = "none";
-              modal_ios.style.display = "none";
-              modal_win.style.display = "none";
-            }
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-              if (event.target == modal_adr) {
-                modal_adr.style.display = "none";
-              }
-              else if (event.target == modal_ios) {
-                modal_ios.style.display = "none";
-              }
-              else if (event.target == modal_win) {
-                modal_win.style.display = "none";
-              }
-            }
-ti ne virubil komp kogda ushol no ja virubila (pochalujsta)
-   
-
-            </script>
     </body>
 
 </html>
