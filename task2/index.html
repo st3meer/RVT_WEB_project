@@ -99,13 +99,23 @@
             // When the user clicks on <span> (x), close the modal
             span.onclick = function() {
               modal_adr.style.display = "none";
+              modal_ios.style.display = "none";
+              modal_win.style.display = "none";
             }
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
               if (event.target == modal_adr) {
                 modal_adr.style.display = "none";
               }
+              else if (event.target == modal_ios) {
+                modal_ios.style.display = "none";
+              }
+              else if (event.target == modal_win) {
+                modal_win.style.display = "none";
+              }
             }
+ti ne virubil komp kogda ushol no ja virubila (pochalujsta)
+   
 
             </script>
     </body>
